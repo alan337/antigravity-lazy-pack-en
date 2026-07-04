@@ -13,9 +13,9 @@ This document only includes setup processes that can be publicly shared. It does
 ## Prerequisites
 
 - [ ] Anti-Gravity or an MCP-capable AI coding assistant installed
-- [ ] Git installed (User scope: `~\AppData\Local\Programs\Git\cmd`)
-- [ ] GitHub CLI (`gh`) installed (User scope via winget)
-- [ ] Node.js / npm installed (User scope via winget)
+- [ ] Git installed (**User scope only**: extract MinGit to `~\AppData\Local\Programs\Git` to bypass admin prompts)
+- [ ] GitHub CLI (`gh`) installed (**User scope only**: `winget install --id GitHub.cli --scope user`)
+- [ ] Node.js / npm installed (**User scope only**: `winget install --id OpenJS.NodeJS --scope user`)
 - [ ] Python or `uv` installed
 - [ ] Google account for NotebookLM / Firebase
 - [ ] GitHub account

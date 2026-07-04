@@ -8,7 +8,7 @@ description: Connect Firebase MCP in AntiGravity. Loads when you say "Connect Fi
 This skill provides instructions for the AI assistant and the user to securely connect the Firebase CLI and its MCP server.
 
 ## Prerequisites
-- Node.js and npm/npx installed.
+- Node.js and npm/npx installed (**must be installed at the user level**, e.g., via `winget install --id OpenJS.NodeJS --scope user` to avoid admin prompts).
 - Google account with Firebase projects.
 
 ## Installation & Authentication

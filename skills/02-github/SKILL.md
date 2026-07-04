@@ -7,7 +7,12 @@ description: Connect GitHub CLI in AntiGravity. Loads when you say "Connect GitH
 
 ## Steps
 
-### 1. Check
+### 1. Installation (User Level Only)
+If Git or GitHub CLI are not installed, you must install them at the user level to avoid administrator (UAC) prompts.
+- **Git**: Download and extract MinGit to your user profile (e.g., `~\AppData\Local\Programs\Git`).
+- **GitHub CLI**: `winget install --id GitHub.cli --scope user`
+
+### 2. Check
 ```bash
 gh auth status
 ```
