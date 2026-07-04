@@ -36,13 +36,12 @@ nlm login
 *Note: `nlm login` will open a browser window. The user must manually complete the Google OAuth flow in the browser.*
 
 ### Verification
-Verify that the login was successful and the account is linked:
+Verify that the login was successful and the account is linked. First, set the encoding to prevent Windows parsing errors:
 ```powershell
+$env:PYTHONIOENCODING = "utf-8"
 nlm doctor
 nlm list notebooks
 ```
-
-*(Troubleshooting Windows encoding issues: If you see CP950/Unicode errors, run `$env:PYTHONIOENCODING = "utf-8"` in the same session before running `nlm doctor`)*
 
 ## MCP Server Registration
 To register this tool with the AI assistant's MCP configuration, use the following JSON structure (adjust paths depending on the exact AI assistant you are using):

@@ -29,12 +29,14 @@ Login to Firebase:
 ```powershell
 npx.cmd -y firebase-tools@latest login
 ```
-*Note: `firebase login` requires an interactive browser session. If the AI assistant gets stuck trying to run this, the user must open a fresh PowerShell terminal manually, run the command, complete the browser login, and then return to the AI assistant to verify.*
+*Note: DO NOT run `firebase login` silently in the background as it expects an interactive terminal and will hang. You must either guide the user to run it in a separate terminal, or run it in a way that allows interaction.*
 
 ### Verification
-Once logged in, verify the connection by listing the projects:
+Once logged in, verify the connection by listing the projects and apps:
 ```powershell
 npx.cmd -y firebase-tools@latest projects:list
+# Then to list apps for a specific project:
+npx.cmd -y firebase-tools@latest apps:list --project <project_id>
 ```
 
 ## MCP Server Registration

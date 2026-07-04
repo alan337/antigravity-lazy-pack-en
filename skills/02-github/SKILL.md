@@ -17,14 +17,18 @@ Before installing anything, evaluate if the user is running in Admin Mode (defau
   - **GitHub CLI**: Use `winget install --id GitHub.cli --scope user`.
 
 ### 2. Check
+Clear conflicting environment variables first to avoid Bad Credentials errors:
 ```bash
+Remove-Item Env:\GITHUB_TOKEN, Env:\GH_TOKEN -ErrorAction SilentlyContinue
 gh auth status
 ```
 
-### 2. Login
+### 3. Login
 ```bash
+Remove-Item Env:\GITHUB_TOKEN, Env:\GH_TOKEN -ErrorAction SilentlyContinue
 gh auth login --web --git-protocol https
 ```
+*(If the CLI prompts you with a device code, present it to the user so they can authenticate via browser)*
 
 ### 3. Set Git User
 ```bash
