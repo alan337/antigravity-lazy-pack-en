@@ -12,6 +12,12 @@ This skill provides instructions for the AI assistant and the user to securely c
 - Google account with Firebase projects.
 
 ## Installation & Authentication
+
+**🤖 AI AGENT INSTRUCTIONS: TWO SCENARIOS**
+Before running installation or authentication commands, evaluate the environment:
+- **Admin Mode (Default)**: You can use standard global installations.
+- **User Level Only**: If the user requests user-level execution (no admin account), you MUST NOT trigger UAC prompts. First, verify if Node.js/npx are already installed in user paths (e.g., via `winget` packages in AppData). If missing, install Node.js via `winget install --id OpenJS.NodeJS --scope user`. Then, instead of installing Firebase globally, use `npx.cmd` to run Firebase commands on the fly.
+
 On Windows, it is highly recommended to use `npx.cmd` to bypass PowerShell execution policy restrictions.
 
 Check the CLI version:
